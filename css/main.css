@@ -1,0 +1,383 @@
+/**************************************************
+Fonts
+Droid Serif
+Droid Sans
+Droid Sans Mono
+
+Font Scaling
+6.854rem
+4.236rem
+2.618rem
+1.618rem
+1.0rem
+0.618rem
+
+Colour scheme
+
+**************************************************/
+@import 'https://fonts.googleapis.com/css?family=Arvo|Rubik';
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*{
+    /*padding: 0;*/
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Rubik', Verdana, sans-serif;
+    background: linear-gradient(#CC8432, #FFA43E);
+}
+/*************************** 
+DEFAULTS - MOBILE FIRST 
+***************************/
+h1{
+    font: bold 2.618rem 'Arvo', Georgia, serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+h2{
+    font: bold 1.618rem 'Arvo', Georgia, serif;
+}
+li, p, a{
+    font: bold 1.0rem 'Rubik', Verdana, sans-serif;
+}
+section.first p:first-of-type{
+    font-size: 0.618rem;
+}
+pre, code, kbd{
+    font: normal 1.0rem 'Rubik', Verdana, sans-serif;
+}
+footer a,
+footer a:link,
+footer a:visited{
+    font: normal 0.618rem 'Rubik', Verdana, sans-serif;
+    float: left;
+    display: block;
+}
+footer p{
+    font: normal 0.618rem 'Rubik', Verdana, sans-serif;
+}
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+.wrapper{
+    width: 95%;
+    margin: auto;
+}
+header{
+    width: 100%;
+    height: 25%;
+    background-image: url("http://loremflickr.com/1920/1080/giraffe,giraffes");
+    padding-top: 8%;
+    padding-bottom: 2%;
+}
+h1{
+
+}
+nav{
+    width: 100%;
+    padding-bottom: 5px;
+}
+nav ul{
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+nav li{
+    list-style: none;
+    padding-bottom: .1rem;
+    margin-bottom: .5rem;
+}
+nav a,
+nav a:link,
+nav a:visited{
+    background-color: #FFA43E;
+    box-shadow: 0 6px #7F521F;
+    border-radius: 0 0 10px 10px;
+    display: block;
+    font: bold 1rem 'Rubik', Verdana, sans-serif;
+    text-align: center;
+    color: #7F4F23;
+    text-decoration: none;
+}
+nav a:active,
+nav a:focus,
+nav a:hover{
+    background-color: #FFA43E;
+    box-shadow: 0 3px #7F521F;
+    border-radius: 0 0 10px 10px;
+    display: block;
+    font: bold 1rem 'Rubik', Verdana, sans-serif;
+    text-align: center;
+    color: #7F4F23;
+    text-decoration: none;
+}
+main{
+    width: 100%;
+    background-color: #FFC88B;
+    float: none;
+}
+.col{
+    float: none;
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    background-color: #FFC88B;
+}
+section.first {
+    border-top: black solid 5px;
+}
+.col img{
+    width: auto;
+    height: auto;
+    width: 100%;
+    background-color: azure;
+    position: relative;
+    float: left;
+    margin: 1%;
+}
+footer {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 3% 0 0 0;
+    border-top: black solid 5px;
+    background-color: #7F6445;
+}
+footer ul li {
+    width: 100%;
+    display: inline;
+    text-align: left;
+    float: left;
+    padding: 0;
+}
+
+/* wrapper - 100%
+header - 100%
+nav - 90%
+links - 20% of nav
+main - 90%
+columns - 50% of main
+column image - 60% of column
+footer - 90% */
+
+@media screen and (min-width:600px) and (max-width:800px){
+    .wrapper {
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    header h1{
+        font-size: 4.236rem;
+    }
+    nav {
+        width: 90%;
+        float: left;
+        padding-left: 10%;  
+    }
+    nav li {
+        width: 20%;
+        display: block;
+        float: left;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    main {
+        width: 90%;
+        background-color: #FFC88B;
+        margin-left: 5%;
+    }
+    .col {
+        width: 50%;
+        float: left;
+        display: block;
+        border-top: black solid 5px;
+    }
+
+    .col img {
+        width: 60%;
+        padding: 1%;
+    }
+    footer {
+        width: 90%;
+        float: left;
+        text-align: center;
+        padding: 3% 10% 0 0;
+        border-top: black solid 1px;
+    }
+    footer ul li {
+        display: inline-block;
+        list-style-type: none;
+        padding-right: 20px;
+        width: 33%;
+        text-align: center;
+    }
+    footer a,
+    footer a:link,
+    footer a:visited{
+        font-size: 1rem;
+        display: inline;
+        list-style-type: none;
+        padding-left: 33%;
+        font-size: 0.618rem;
+    }
+}
+
+/* header - 100%
+nav - 90%
+links - 20% of nav
+main - 90%
+columns - 50% of main
+column image - 50% of column
+footer - 100% */
+
+@media screen and (min-width: 800px) and (max-width:1200px){
+    .wrapper {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    header h1{
+        text-align: left;
+        font-size: 4.236rem;
+    }
+    nav {
+        width: 90%;
+        float: bottom;
+        float: left;
+        padding-left: 0;
+    }    
+    nav li {
+        width: 20%;
+        padding: 0 0 1% 0;
+        display: inline-block;
+        float: left;
+    }
+    main {
+        width: 90%;
+        background-color: #FFC88B;
+    }
+    li, p, a{
+        font-size: 1rem;
+    }
+    .col {
+        width: 50%;
+        float: left;
+        border-top: black solid 5px;
+    }
+    .col img {
+        width: 50%;
+        padding: 1%;
+    }
+    section.second {
+        padding-bottom: 2rem;
+    }
+    footer {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding: 3% 10% 0 0;
+        border-top: black solid 1px;
+    }
+    footer ul li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 20px;
+        width: 33%;
+        text-align: center;
+    }
+}
+
+/* header - 100%
+nav - 30%
+links - 100% of nav
+main - 70%
+columns - 50% of main
+column image - 55% of column width
+footer - 100% */
+
+@media screen and (min-width: 1200px){
+    .wrapper {
+        width: 100%;
+        border-bottom: black solid 5px;
+    }
+    header {
+        width: 100%;   
+    }
+    header h1{
+        text-align: left;
+        padding: 0 0 0 10rem;
+        font-size: 6.854rem;
+    }
+    h2{
+        font-size: 2.618rem;
+    }
+    nav {
+        border-top: black solid 5px;
+        width: 30%;
+        float: left;
+    }
+    nav li {
+        width: 100%;
+        padding: 0 0 1rem 0;
+        display: block;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited{
+        font-size: 1.618rem;
+    }
+    main {
+        width: 70%;
+        float: right;
+    }
+    p{
+        font-size: 1.618rem;
+    }
+    .col {
+        width: 50%;
+        float: left;
+        border-top: black solid 5px;
+    }
+    .col img {
+        width: 55%;
+        padding: 1%;
+    }
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0 0 0;
+        border-top: black solid 1px;
+    }
+    footer ul li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 20px;
+        width: 33%;
+        text-align: center;
+    }
+    footer a,
+    footer a:link,
+    footer a:visited{
+        font-size: 1rem;
+        display: inline;
+        list-style-type: none;
+        padding-left: 33%;       
+    }
+    footer p{
+        font-size:1rem
+    }
+}
